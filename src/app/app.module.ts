@@ -7,6 +7,7 @@ import { ProductListComponent } from './product-list/product-list.component';
 
 import { RouterModule } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -15,8 +16,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     RouterModule.forRoot([
-    {path: 'product-list', component: ProductListComponent}
+    {path: '', component: ProductListComponent}
   ]),
     NgbModule,
   ],

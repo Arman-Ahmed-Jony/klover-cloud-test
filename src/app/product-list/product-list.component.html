@@ -1,1 +1,80 @@
-<p>product-list works!</p>
+<div class="introduction-container">
+  <div>
+    <div>
+      <h1>Lorem ipsum dolor <b>sit amet</b></h1>
+      <p>pellentesque duis dui blandit. Fames nibh et, est augue mollis nullam. Pharetra, pulvinar molestie penatibus leo.</p>
+    </div>
+    <div class="input-group mb-5 mt-5">
+      <input type="text" class="form-control p-4" placeholder="Enter your email">
+      <div class="input-group-append">
+        <button class="btn theme-color" type="button">Get Early Access</button>
+      </div>
+      
+    </div>
+  </div>
+  <div>
+    <div class="image-container">
+      <img class="img1" src="../../assets/creators-collective.png" alt="">
+      <img class="img2" src="../../assets/blake-wisz.png" alt="">
+      <img class="img3" src="../../assets/christiann-koepke.png" alt="">
+    </div>
+  </div>
+</div>
+<button (click)= "getAllProduct()"></button>
+<ng-template #content let-modal>
+  <div class="close-item-popup">
+    <button
+      type="button"
+      class="close text-white"
+      aria-label="Close"
+      (click)="modal.dismiss('Cross click')"
+    >
+      <span aria-hidden="true">&times;</span>
+    </button>
+    <div
+      class="d-flex flex-column flex-lg-row modal-body item-details-container"
+    >
+      <div class="p-6">
+        <img
+          src="https://via.placeholder.com/300"
+          alt="bear picture"
+          width="300px"
+          height="300px"
+        />
+        <p>villa nadilla</p>
+        <p>$100</p>
+      </div>
+      <div class="p-6 ml-lg-4">
+        <p>Details</p>
+        <p>
+          Details: pellentesque duis dui blandit. Fames nibh et, est augue
+          mollis nullam. Pharetra, pulvinar molestie penatibus leo. pellentesque
+          duis dui blandit. Fames nibh et, est augue mollis nullam. Pharetra,
+          pulvinar molestie penatibus leo. pellentesque duis dui blandit. Fames
+          nibh et, est augue mollis nullam. Pharetra, pulvinar molestie
+          penatibus leo. pellentesque duis dui blandit. Fames nibh et, est augue
+          mollis nullam. Pharetra, pulvinar molestie penatibus leo.
+        </p>
+      </div>
+    </div>
+  </div>
+</ng-template>
+
+<button class="btn btn-lg btn-outline-primary" (click)="open(content)">
+  Launch demo modal
+</button>
+<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum quidem, distinctio quasi rem praesentium ipsa voluptatibus consequatur laboriosam enim optio eveniet tenetur necessitatibus, molestiae rerum molestias expedita, cumque doloremque? Fugiat.</div>
+<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum quidem, distinctio quasi rem praesentium ipsa voluptatibus consequatur laboriosam enim optio eveniet tenetur necessitatibus, molestiae rerum molestias expedita, cumque doloremque? Fugiat.</div>
+<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum quidem, distinctio quasi rem praesentium ipsa voluptatibus consequatur laboriosam enim optio eveniet tenetur necessitatibus, molestiae rerum molestias expedita, cumque doloremque? Fugiat.</div>
+<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum quidem, distinctio quasi rem praesentium ipsa voluptatibus consequatur laboriosam enim optio eveniet tenetur necessitatibus, molestiae rerum molestias expedita, cumque doloremque? Fugiat.</div>
+<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum quidem, distinctio quasi rem praesentium ipsa voluptatibus consequatur laboriosam enim optio eveniet tenetur necessitatibus, molestiae rerum molestias expedita, cumque doloremque? Fugiat.</div>
+<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum quidem, distinctio quasi rem praesentium ipsa voluptatibus consequatur laboriosam enim optio eveniet tenetur necessitatibus, molestiae rerum molestias expedita, cumque doloremque? Fugiat.</div>
+<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum quidem, distinctio quasi rem praesentium ipsa voluptatibus consequatur laboriosam enim optio eveniet tenetur necessitatibus, molestiae rerum molestias expedita, cumque doloremque? Fugiat.</div>
+<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum quidem, distinctio quasi rem praesentium ipsa voluptatibus consequatur laboriosam enim optio eveniet tenetur necessitatibus, molestiae rerum molestias expedita, cumque doloremque? Fugiat.</div>
+<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum quidem, distinctio quasi rem praesentium ipsa voluptatibus consequatur laboriosam enim optio eveniet tenetur necessitatibus, molestiae rerum molestias expedita, cumque doloremque? Fugiat.</div>
+<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum quidem, distinctio quasi rem praesentium ipsa voluptatibus consequatur laboriosam enim optio eveniet tenetur necessitatibus, molestiae rerum molestias expedita, cumque doloremque? Fugiat.</div>
+<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum quidem, distinctio quasi rem praesentium ipsa voluptatibus consequatur laboriosam enim optio eveniet tenetur necessitatibus, molestiae rerum molestias expedita, cumque doloremque? Fugiat.</div>
+<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum quidem, distinctio quasi rem praesentium ipsa voluptatibus consequatur laboriosam enim optio eveniet tenetur necessitatibus, molestiae rerum molestias expedita, cumque doloremque? Fugiat.</div>
+
+
+<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum quidem, distinctio quasi rem praesentium ipsa voluptatibus consequatur laboriosam enim optio eveniet tenetur necessitatibus, molestiae rerum molestias expedita, cumque doloremque? Fugiat.</div>

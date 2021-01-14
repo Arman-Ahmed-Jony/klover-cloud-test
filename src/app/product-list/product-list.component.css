@@ -1,0 +1,76 @@
+.theme-color,
+.item-details-container {
+  background-color: #1f4948;
+  color: white;
+}
+.close-item-popup {
+  background-color: #1f4948;
+  color: white;
+  position: relative;
+}
+.close {
+  z-index: 5;
+  position: absolute;
+  right: 30px;
+  top: 30px;
+}
+
+.introduction-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.introduction-container > div {
+  flex: 0 1 725px; /* no straching*/
+  flex-grow: 4;
+}
+.introduction-container > div:first-child {
+  padding-left: 100px;
+  padding-top: 100px;
+}
+.introduction-container > div:first-child > div > h2 {
+  margin-top: 200px;
+}
+.introduction-container > div:first-child > div {
+  max-width: 400px;
+}
+.introduction-container > div:last-child {
+  height: 600px;
+  background-color: #1f4948;
+  position: relative;
+}
+
+/* .img1, .img2, img3{
+
+} */
+.image-container{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  /* overflow-x: hidden; */
+  width: 100%;
+
+}
+.img1 {
+  position: absolute;
+  width: 500px;
+  border-radius: 0 7em 0 0;
+  top: 100px;
+  left: -60px;
+}
+.img2 {
+  position: absolute;
+  width: 380px;
+  border-radius: 7em 0 0 0;
+  top: 440px;
+  left: 60px;
+}
+
+.img3 {
+  position: absolute;
+  top: 340px;
+  left: 480px;
+  border-radius:  0 0 0 7em;
+}

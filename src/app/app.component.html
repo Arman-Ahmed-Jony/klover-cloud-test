@@ -1,11 +1,62 @@
+<header class="navbar navbar-expand-lg navbar-light sticky-top">
+  <a class="navbar-brand" href="#">Store Name</a>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-<!-- Header -->
-<header class="toolbar" role="banner">
-  pic | store name | products | pricing | sign in
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item dropdown">
+        <a
+          class="nav-link dropdown-toggle"
+          href="#"
+          id="navbarDropdown"
+          role="button"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          <span class="sr-only">(current)</span>
+          Products
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Pricing</a>
+      </li>
+    </ul>
+    <button class="btn btn-outline-light my-2 my-sm-0" type="submit">
+      Sign in
+    </button>
+  </div>
 </header>
 
 <div class="content" role="main">
   <router-outlet></router-outlet>
 </div>
 
-<footer></footer>
+<footer
+  class="d-flex flex-row justify-content-around flex-column-reverse flex-md-row flex-sm-row flex-fill"
+>
+  <div>
+    <p>&copy; 2020 storename</p>
+  </div>
+  <div class="d-flex flex-row flex-sm-row justify-content-around align-items-center">
+    <a href="">galery</a>
+    <a href="">about</a>
+    <a href="">contact</a>
+  </div>
+</footer>

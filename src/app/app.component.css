@@ -1,6 +1,9 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+
   :host {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-family: 'Poppins', sans-serif;
+
     font-size: 14px;
     color: #333;
     box-sizing: border-box;
@@ -33,8 +36,8 @@
     height: 60px;
     display: flex;
     align-items: center;
-    background-color: #1976d2;
-    color: rgb(36, 31, 31);
+    background-color: #ffffff00;
+    color: #1F4948;
     font-weight: 600;
   }
 
@@ -53,11 +56,10 @@
 
   .content {
     display: flex;
-    margin: 82px auto 32px;
-    padding: 0 16px;
-    max-width: 960px;
+    padding: 0 0;
+    max-width: 100%;
     flex-direction: column;
-    align-items: center;
+    /* align-items: center; */
   }
 
   svg.material-icons {
@@ -211,16 +213,36 @@
     box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
   }
 
+  header{
+    background-color: lighten(#0074d9, 20);
+    opacity: .85;
+    padding: 20px;
+    color: rgba(255,255,255,.9);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+  }
+
   footer {
     margin-top: 8px;
     display: flex;
     align-items: center;
+    min-height: 100px;
+    background-color: #1f4948;
     line-height: 20px;
+    justify-content: center ;
+    /* flex: 1 0; */
   }
 
-  footer a {
-    display: flex;
-    align-items: center;
+  footer div {
+    flex: 0 1 50px; /* no straching*/
+    flex-grow: 6;
+    text-align: center;
+  }
+
+  footer div a {
+    
   }
 
   .github-star-badge {
@@ -287,3 +309,5 @@
       visibility: hidden;
     }
   }
+
+  
