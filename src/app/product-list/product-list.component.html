@@ -33,7 +33,7 @@
 <div style="margin-top: 100px;">
   <h4 style="text-align: center;">Products</h4>
   <div class="product-list-container">
-    <div class="product-info-container" *ngFor="let item of products">
+    <div class="product-info-container" *ngFor="let item of products" (click)="showProductInfo(item)">
       <img src="{{item.image_url}}" alt="" srcset="">
       <p style="font-weight: 300; font-size: larger;">{{item.name}}</p>
       <p>$100</p>
