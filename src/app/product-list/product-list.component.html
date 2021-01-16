@@ -16,7 +16,9 @@
         placeholder="Enter your email"
       />
       <div class="input-group-append">
-        <button class="btn theme-color" style="padding: 10px;" type="button">Get Early Access</button>
+        <button class="btn theme-color" style="padding: 10px" type="button">
+          Get Early Access
+        </button>
       </div>
     </div>
   </div>
@@ -30,12 +32,32 @@
     </div>
   </div>
 </div>
-<div style="margin-top: 100px">
+<div style="margin-top: 100px" class="main-body">
+  <div class="pagination-container">
+    <!-- <ul>
+      <li (click)="goToPrev()" [class.disabled-arrow]="currentPage == 1"><span class="arrow arrow-left"></span></li>
+      <li (click)="goToNext()" [class.disabled-arrow]="currentPage == numberOfPages"><span class="arrow arrow-right"></span></li>
+    </ul> -->
+    <div
+      class="arrow"
+      [class.available-arrow]="currentPage != 1"
+      (click)="goToPrev()"
+    >
+      <
+    </div>
+    <div
+      class="arrow"
+      [class.available-arrow]="currentPage != numberOfPages"
+      (click)="goToNext()"
+    >
+      >
+    </div>
+  </div>
   <h4 style="text-align: center">Products</h4>
   <div class="product-list-container">
     <div
       class="product-info-container"
-      *ngFor="let item of products"
+      *ngFor="let item of pageList"
       (click)="showProductInfo(item, content)"
     >
       <img src="{{ item.image_url }}" alt="" srcset="" />
@@ -92,7 +114,7 @@
         <p>$100</p>
       </div>
       <div class="p-6 ml-lg-4">
-        <p style="font-weight: bolder;">Details:</p>
+        <p style="font-weight: bolder">Details:</p>
         <p>
           {{ selectedProduct.brewers_tips }}
         </p>

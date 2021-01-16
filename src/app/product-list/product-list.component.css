@@ -186,3 +186,33 @@
   width: 250px;
   height: 400px;
 }
+.pagination-container{
+  display: flex;
+  position: absolute;
+  right: 0; 
+  top: -100px;
+  align-items: center;
+  height: 200px;
+  width: 200px;
+  justify-content: space-around;
+}
+.main-body{
+  position: relative;
+}
+.available-arrow{
+  font-size: 30px;
+  color: white;
+  background-color: #1f4948;
+}
+
+.arrow {
+  display: inline-block;
+  width: 30px;
+  border-radius: 50%;
+  font-size: 20px;
+  /* color: white;
+  background-color: #1f4948; */
+  align-items: stretch;
+  text-align: center;
+  height: 30px;
+}

@@ -12,6 +12,11 @@ export class ProductListComponent implements OnInit {
   products: any = [];
   selectedProduct: any = {};
 
+  pageList = new Array();
+  currentPage = 1;
+  numberPerPage = 6;
+  numberOfPages = 0;
+
   constructor(
     private modalService: NgbModal,
     private productService: ProdcutsService
@@ -54,28 +59,50 @@ export class ProductListComponent implements OnInit {
     );
   }
   showProductInfo(item: any, content: any) {
-    this.selectedProduct = item
-    console.log(this.selectedProduct)
+    this.selectedProduct = item;
+    console.log(this.selectedProduct);
     this.modalService
-    .open(content, {
-      ariaLabelledBy: 'modal-basic-title',
-      centered: true,
-      size: 'lg',
-    })
-    .result.then(
-      (result) => {
-        this.closeResult = `Closed with: ${result}`;
-      },
-      (reason) => {
-        this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
-      }
-    );
+      .open(content, {
+        ariaLabelledBy: 'modal-basic-title',
+        centered: true,
+        size: 'lg',
+      })
+      .result.then(
+        (result) => {
+          this.closeResult = `Closed with: ${result}`;
+        },
+        (reason) => {
+          this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
+        }
+      );
+  }
+  goToPrev() {
+    if (!(this.currentPage == 1)) {
+      console.log('called prev');
+      this.currentPage--;
+      this.loadList();
+    }
+  }
+  goToNext() {
+    if(!(this.currentPage == this.numberOfPages)){
+      this.currentPage++;
+      console.log('called next');
+      this.loadList();
+    }
+  }
+  loadList() {
+    var begin = (this.currentPage - 1) * this.numberPerPage;
+    var end = begin + this.numberPerPage;
+
+    this.pageList = this.products.slice(begin, end);
   }
   ngOnInit(): void {
     this.productService.getAllProduct().subscribe(
       (data) => {
         console.log(data);
         this.products = data;
+        this.numberOfPages = Math.ceil(this.products.length / this.numberPerPage);
+        this.loadList();
       },
       (error) => {}
     );
