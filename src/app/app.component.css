@@ -241,8 +241,8 @@
     text-align: center;
   }
 
-  footer div a {
-    
+  .sign-in{
+    color: rgb(164, 165, 165);
   }
 
   .github-star-badge {
