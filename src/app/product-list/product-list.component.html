@@ -24,7 +24,30 @@
     </div>
   </div>
 </div>
-<button (click)= "getAllProduct()"></button>
+<!-- <button (click)= "getAllProduct()"></button> -->
+
+
+<button class="btn btn-lg btn-outline-primary" (click)="open(content)">
+  Launch demo modal
+</button>
+<div style="margin-top: 100px;">
+  <h4 style="text-align: center;">Products</h4>
+  <div class="product-list-container">
+    <div class="product-info-container" *ngFor="let item of products">
+      <img src="{{item.image_url}}" alt="" srcset="">
+      <p style="font-weight: 300; font-size: larger;">{{item.name}}</p>
+      <p>$100</p>
+    </div>
+    <div class="banner-container">
+      <h2>There's something for everyone!</h2>
+      <h6>15% OFF YOUR FIRST 3 ORDER</h6>
+      <img src="../../assets/jabeerwocky-craft-beer 1.png" alt="">
+      <img src="../../assets/Rectangle 772.png" alt="">
+    </div>
+  </div>
+</div>
+
+
 <ng-template #content let-modal>
   <div class="close-item-popup">
     <button
@@ -63,25 +86,3 @@
     </div>
   </div>
 </ng-template>
-
-<button class="btn btn-lg btn-outline-primary" (click)="open(content)">
-  Launch demo modal
-</button>
-<div style="margin-top: 100px;">
-  <div *ngFor="let item of products">{{item.brewers_tips}}</div>
-</div>
-<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum quidem, distinctio quasi rem praesentium ipsa voluptatibus consequatur laboriosam enim optio eveniet tenetur necessitatibus, molestiae rerum molestias expedita, cumque doloremque? Fugiat.</div>
-<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum quidem, distinctio quasi rem praesentium ipsa voluptatibus consequatur laboriosam enim optio eveniet tenetur necessitatibus, molestiae rerum molestias expedita, cumque doloremque? Fugiat.</div>
-<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum quidem, distinctio quasi rem praesentium ipsa voluptatibus consequatur laboriosam enim optio eveniet tenetur necessitatibus, molestiae rerum molestias expedita, cumque doloremque? Fugiat.</div>
-<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum quidem, distinctio quasi rem praesentium ipsa voluptatibus consequatur laboriosam enim optio eveniet tenetur necessitatibus, molestiae rerum molestias expedita, cumque doloremque? Fugiat.</div>
-<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum quidem, distinctio quasi rem praesentium ipsa voluptatibus consequatur laboriosam enim optio eveniet tenetur necessitatibus, molestiae rerum molestias expedita, cumque doloremque? Fugiat.</div>
-<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum quidem, distinctio quasi rem praesentium ipsa voluptatibus consequatur laboriosam enim optio eveniet tenetur necessitatibus, molestiae rerum molestias expedita, cumque doloremque? Fugiat.</div>
-<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum quidem, distinctio quasi rem praesentium ipsa voluptatibus consequatur laboriosam enim optio eveniet tenetur necessitatibus, molestiae rerum molestias expedita, cumque doloremque? Fugiat.</div>
-<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum quidem, distinctio quasi rem praesentium ipsa voluptatibus consequatur laboriosam enim optio eveniet tenetur necessitatibus, molestiae rerum molestias expedita, cumque doloremque? Fugiat.</div>
-<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum quidem, distinctio quasi rem praesentium ipsa voluptatibus consequatur laboriosam enim optio eveniet tenetur necessitatibus, molestiae rerum molestias expedita, cumque doloremque? Fugiat.</div>
-<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum quidem, distinctio quasi rem praesentium ipsa voluptatibus consequatur laboriosam enim optio eveniet tenetur necessitatibus, molestiae rerum molestias expedita, cumque doloremque? Fugiat.</div>
-<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum quidem, distinctio quasi rem praesentium ipsa voluptatibus consequatur laboriosam enim optio eveniet tenetur necessitatibus, molestiae rerum molestias expedita, cumque doloremque? Fugiat.</div>
-<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum quidem, distinctio quasi rem praesentium ipsa voluptatibus consequatur laboriosam enim optio eveniet tenetur necessitatibus, molestiae rerum molestias expedita, cumque doloremque? Fugiat.</div>
-
-
-<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum quidem, distinctio quasi rem praesentium ipsa voluptatibus consequatur laboriosam enim optio eveniet tenetur necessitatibus, molestiae rerum molestias expedita, cumque doloremque? Fugiat.</div>

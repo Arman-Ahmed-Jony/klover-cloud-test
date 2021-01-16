@@ -21,18 +21,18 @@
   justify-content: center;
   /* position: relative; */
 }
-.side-group1{
+.side-group1 {
   position: absolute;
   left: 0;
   top: 200px;
 }
-.side-group2{
+.side-group2 {
   position: absolute;
   right: 0;
   top: 100px;
   z-index: 98;
 }
-.side-group3{
+.side-group3 {
   position: absolute;
   top: 50px;
   left: 110px;
@@ -62,14 +62,13 @@
 /* .img1, .img2, img3{
 
 } */
-.image-container{
+.image-container {
   position: absolute;
   bottom: 150px;
   right: 0;
   height: 500px;
   /* overflow-x: hidden; */
   width: 720px;
-
 }
 .img1 {
   position: absolute;
@@ -93,5 +92,67 @@
   z-index: 99;
   top: 340px;
   right: 0;
-  border-radius:  0 0 0 7em;
+  border-radius: 0 0 0 7em;
+}
+
+.product-list-container {
+  display: flex;
+  max-width: 1000px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+.product-info-container {
+  padding: 50px;
+  flex-grow: 1;
+  justify-content: space-around;
+  margin: 0 auto;
+}
+
+.product-info-container:hover {
+  background-color: #f3fafcd8;
+  outline: 2px solid #cacacac0;
+}
+
+/* .product-info-container > p{
+  font-size: larger;
+} */
+.product-info-container > img {
+  display: block;
+  margin-bottom: 20px;
+  /* margin: 0 auto; */
+  height: 400px;
+}
+
+.banner-container {
+  position: relative;
+  height: 300px;
+  width: 100%;
+  margin: 0 auto;
+  margin: 50px auto;
+  outline: 1px solid red;
+}
+.banner-container > img {
+  position: absolute;
+  height: 300px;
+  width: 90%;
+}
+.banner-container > img:first-child {
+  right: 0;
+}
+.banner-container > img:last-child {
+  left: 0;
+}
+.banner-container > h2 {
+  position: absolute;
+  left: 50px;
+  top: 100px;
+  color: white;
+  z-index: 99;
+}
+.banner-container > h6 {
+  position: absolute;
+  left: 50px;
+  color: white;
+  top: 150px;
+  z-index: 99;
 }
