@@ -10,6 +10,7 @@ import { ProdcutsService } from '../services/prodcuts.service';
 export class ProductListComponent implements OnInit {
   closeResult = '';
   products: any = [];
+  selectedProduct: any = {};
 
   constructor(
     private modalService: NgbModal,
@@ -52,8 +53,23 @@ export class ProductListComponent implements OnInit {
       (error) => {}
     );
   }
-  showProductInfo(item: any) {
-    console.log(item);
+  showProductInfo(item: any, content: any) {
+    this.selectedProduct = item
+    console.log(this.selectedProduct)
+    this.modalService
+    .open(content, {
+      ariaLabelledBy: 'modal-basic-title',
+      centered: true,
+      size: 'lg',
+    })
+    .result.then(
+      (result) => {
+        this.closeResult = `Closed with: ${result}`;
+      },
+      (reason) => {
+        this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
+      }
+    );
   }
   ngOnInit(): void {
     this.productService.getAllProduct().subscribe(

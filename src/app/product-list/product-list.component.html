@@ -1,64 +1,70 @@
-<img class="side-group1" src="../../assets/Group 1575.png" alt="">
-
+<img class="side-group1" src="../../assets/Group 1575.png" alt="" />
 
 <div class="introduction-container">
   <div>
     <div>
       <h1>Lorem ipsum dolor <b>sit amet</b></h1>
-      <p>pellentesque duis dui blandit. Fames nibh et, est augue mollis nullam. Pharetra, pulvinar molestie penatibus leo.</p>
+      <p>
+        pellentesque duis dui blandit. Fames nibh et, est augue mollis nullam.
+        Pharetra, pulvinar molestie penatibus leo.
+      </p>
     </div>
     <div class="input-group mb-5 mt-5">
-      <input type="text" class="form-control p-4" placeholder="Enter your email">
+      <input
+        type="text"
+        class="form-control p-4"
+        placeholder="Enter your email"
+      />
       <div class="input-group-append">
-        <button class="btn theme-color" type="button">Get Early Access</button>
+        <button class="btn theme-color" style="padding: 10px;" type="button">Get Early Access</button>
       </div>
     </div>
   </div>
   <div>
     <div class="image-container">
-      <img class="side-group2" src="../../assets/Group 1579.png" alt="">
-      <img class="side-group3" src="../../assets/Group 1578.png" alt="">
-      <img class="img1" src="../../assets/creators-collective.png" alt="">
-      <img class="img2" src="../../assets/blake-wisz.png" alt="">
-      <img class="img3" src="../../assets/christiann-koepke.png" alt="">
+      <img class="side-group2" src="../../assets/Group 1579.png" alt="" />
+      <img class="side-group3" src="../../assets/Group 1578.png" alt="" />
+      <img class="img1" src="../../assets/creators-collective.png" alt="" />
+      <img class="img2" src="../../assets/blake-wisz.png" alt="" />
+      <img class="img3" src="../../assets/christiann-koepke.png" alt="" />
     </div>
   </div>
 </div>
-<!-- <button (click)= "getAllProduct()"></button> -->
-
-
-<button class="btn btn-lg btn-outline-primary" (click)="open(content)">
-  Launch demo modal
-</button>
-<div style="margin-top: 100px;">
-  <h4 style="text-align: center;">Products</h4>
+<div style="margin-top: 100px">
+  <h4 style="text-align: center">Products</h4>
   <div class="product-list-container">
-    <div class="product-info-container" *ngFor="let item of products" (click)="showProductInfo(item)">
-      <img src="{{item.image_url}}" alt="" srcset="">
-      <p style="font-weight: 300; font-size: larger;">{{item.name}}</p>
+    <div
+      class="product-info-container"
+      *ngFor="let item of products"
+      (click)="showProductInfo(item, content)"
+    >
+      <img src="{{ item.image_url }}" alt="" srcset="" />
+      <p style="font-weight: 300; font-size: larger">{{ item.name }}</p>
       <p>$100</p>
     </div>
     <div class="banner-container">
       <h3>There's something for everyone!</h3>
       <h6>15% OFF YOUR FIRST 3 ORDER</h6>
-      <img class="beer" src="../../assets/jabeerwocky-craft-beer 1.png" alt="">
-      <img src="../../assets/Rectangle 772.png" alt="">
+      <img
+        class="beer"
+        src="../../assets/jabeerwocky-craft-beer 1.png"
+        alt=""
+      />
+      <img src="../../assets/Rectangle 772.png" alt="" />
     </div>
   </div>
 </div>
 
 <div class="review-container">
   <h4>Review</h4>
-  <img style="max-width: 100px;" src="../../assets/review.png" alt="">
+  <img style="max-width: 100px" src="../../assets/review.png" alt="" />
   <h5>Shahidul Islam</h5>
-  <p>“AMAZING test with quality products” </p>
+  <p>“AMAZING test with quality products”</p>
 
-    <div class="change-review">
-      <div *ngFor="let item of [1,2,3]" ></div>
-    </div>
-
+  <div class="change-review">
+    <div *ngFor="let item of [1, 2, 3]"></div>
+  </div>
 </div>
-
 
 <ng-template #content let-modal>
   <div class="close-item-popup">
@@ -74,25 +80,21 @@
       class="d-flex flex-column flex-lg-row modal-body item-details-container"
     >
       <div class="p-6">
-        <img
-          src="https://via.placeholder.com/300"
-          alt="bear picture"
-          width="300px"
-          height="300px"
-        />
-        <p>villa nadilla</p>
+        <div class="info-image">
+          <img
+            src="{{ selectedProduct.image_url }}"
+            alt="bear picture"
+            width="auto"
+            height="400px"
+          />
+        </div>
+        <p>{{ selectedProduct.name }}</p>
         <p>$100</p>
       </div>
       <div class="p-6 ml-lg-4">
-        <p>Details</p>
+        <p style="font-weight: bolder;">Details:</p>
         <p>
-          Details: pellentesque duis dui blandit. Fames nibh et, est augue
-          mollis nullam. Pharetra, pulvinar molestie penatibus leo. pellentesque
-          duis dui blandit. Fames nibh et, est augue mollis nullam. Pharetra,
-          pulvinar molestie penatibus leo. pellentesque duis dui blandit. Fames
-          nibh et, est augue mollis nullam. Pharetra, pulvinar molestie
-          penatibus leo. pellentesque duis dui blandit. Fames nibh et, est augue
-          mollis nullam. Pharetra, pulvinar molestie penatibus leo.
+          {{ selectedProduct.brewers_tips }}
         </p>
       </div>
     </div>

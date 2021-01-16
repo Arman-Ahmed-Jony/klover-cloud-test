@@ -1,6 +1,7 @@
 .theme-color,
 .item-details-container {
   background-color: #1f4948;
+  padding: 40px;
   color: white;
 }
 .close-item-popup {
@@ -179,4 +180,9 @@
 }
 .change-review > div:first-child {
   background-color: #1f4948;
+}
+
+.info-image{
+  width: 250px;
+  height: 400px;
 }

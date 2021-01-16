@@ -231,10 +231,16 @@
     min-height: 100px;
     background-color: #1f4948;
     line-height: 20px;
+    color: white;
     justify-content: center ;
     /* flex: 1 0; */
   }
-
+  footer a {
+    color: white;
+  }
+  footer a:hover{
+    color: #888;
+  }
   footer div {
     flex: 0 1 50px; /* no straching*/
     flex-grow: 6;
